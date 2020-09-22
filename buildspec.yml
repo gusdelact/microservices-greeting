@@ -4,8 +4,8 @@ phases:
   install:
       commands:
          - echo comando de instalacion ...
-          - javac -version
-          - docker version
+         - javac -version
+         - docker version
   build:
        commands:
          - echo Ensamblando arrancando `date`
