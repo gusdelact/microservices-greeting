@@ -10,6 +10,7 @@ phases:
          - echo Compilando un codigo...
          - javac -version
          - mvn package
+         - mvn package -Pdocker
          
   post_build:
        commands:
