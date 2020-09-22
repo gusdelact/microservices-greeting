@@ -1,6 +1,3 @@
-FROM openjdk:jre
+FROM quay.io/wildfly/wildfly-centos7
 
-ADD ${project.build.directory}/${project.build.finalName}-swarm.jar /greeting.jar
-CMD java -jar /greeting.jar
-
-EXPOSE ${greeting.port}
+ADD target/greeting-1.0.war /opt/jboss/wildfly/standalone/deployments/
