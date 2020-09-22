@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+      commands:
+         - echo comando de instalacion ...
+  build:
+       commands:
+         - echo Ensamblando arrancando `date`
+         - echo Compilando un codigo...
+         - javac -version
+         - mvn install
+         
+  post_build:
+       commands:
+         - echo Ensamblando completado `date`
+artifacts:
+  files:
+    - target/greeting-1.0.war
