@@ -4,17 +4,20 @@ phases:
   install:
       commands:
          - echo comando de instalacion ...
+          - javac -version
+          - docker version
   build:
        commands:
          - echo Ensamblando arrancando `date`
          - echo Compilando un codigo...
-         - javac -version
          - mvn package
-         - docker version
+         - docker build -t greeting:1.0
          
   post_build:
        commands:
          - echo Ensamblando completado `date`
+         - echo Imagen docker creada
+         - docker images
 artifacts:
   files:
     - target/greeting-1.0.war
